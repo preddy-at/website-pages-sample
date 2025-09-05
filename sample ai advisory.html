@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Generative AI Advisory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), url('https://placehold.co/1920x1080/f3f4f6/d2262f?text=AI+Advisory') no-repeat center center/cover;
+        }
+
+        .brand-red {
+            color: #d2262f;
+        }
+
+        .brand-red-bg {
+            background-color: #d2262f;
+        }
+
+        .section-header, .section-content {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .section-content {
+            transition-delay: 0.2s;
+        }
+
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .faq-item details > summary { list-style: none; }
+        .faq-item details > summary::-webkit-details-marker { display: none; }
+        .faq-item details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">
+                <span class="brand-red">AI</span> Advisory
+            </h1>
+            <div class="hidden md:flex space-x-6 text-sm items-center text-gray-700">
+                <a href="#overview" class="hover:text-brand-red transition-colors">Overview</a>
+                <a href="#approach" class="hover:text-brand-red transition-colors">Approach</a>
+                <a href="#capabilities" class="hover:text-brand-red transition-colors">Capabilities</a>
+                <a href="#why-us" class="hover:text-brand-red transition-colors">Why Us</a>
+                <a href="#faq" class="hover:text-brand-red transition-colors">FAQ</a>
+                <a href="#contact" class="brand-red-bg text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity">Get Started</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 p-4 border-t border-gray-200">
+             <a href="#overview" class="block py-2 text-gray-800 hover:text-brand-red">Overview</a>
+             <a href="#approach" class="block py-2 text-gray-800 hover:text-brand-red">Approach</a>
+             <a href="#capabilities" class="block py-2 text-gray-800 hover:text-brand-red">Capabilities</a>
+             <a href="#why-us" class="block py-2 text-gray-800 hover:text-brand-red">Why Us</a>
+             <a href="#faq" class="block py-2 text-gray-800 hover:text-brand-red">FAQ</a>
+             <a href="#contact" class="block mt-2 text-center brand-red-bg text-white px-4 py-2 rounded-md hover:opacity-90">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="overview" class="hero-section">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">GenAI Advisory</h2>
+            <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+                We help enterprises move beyond isolated AI experiments to a strategic, well-governed AI program that delivers measurable value and high-ROI investments.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Our Approach Section -->
+        <section id="approach" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">An End-to-End Methodology</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">Our advisory methodology spans the full lifecycle, combining strategy and technical architecture to ensure every AI initiative is aligned, governed, and built to scale.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 section-content">
+                    <!-- Step 1 -->
+                    <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                        <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">1</div>
+                            <h3 class="font-bold text-lg mb-2">Strategy & Alignment</h3>
+                            <p class="text-sm text-gray-600">Identify high-impact use cases, define governance scope, and develop a clear AI roadmap.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Strategy & Alignment</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Prioritize high-impact use cases</li>
+                                <li>Define governance & risk appetite</li>
+                                <li>Develop roadmap with executive buy-in</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                        <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">2</div>
+                            <h3 class="font-bold text-lg mb-2">Architecture & Roadmap</h3>
+                            <p class="text-sm text-gray-600">Design a scalable AI architecture, define integration points, and create a phased implementation plan.</p>
+                        </div>
+                         <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Architecture & Roadmap</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Design scalable data pipelines</li>
+                                <li>Embed zero-trust guardrails</li>
+                                <li>Recommend vendor-neutral tech stack</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                        <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                           <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">3</div>
+                            <h3 class="font-bold text-lg mb-2">Pilot & Refinement</h3>
+                            <p class="text-sm text-gray-600">Launch focused pilot projects, advise on model fine-tuning (RLHF, PEFT), and iterate based on KPIs.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Pilot & Refinement</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Launch focused MVP pilots</li>
+                                <li>Advise on efficient tuning (LoRA/PEFT)</li>
+                                <li>Iterate based on user feedback & KPIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                        <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">4</div>
+                            <h3 class="font-bold text-lg mb-2">Deployment & Scaling</h3>
+                            <p class="text-sm text-gray-600">Plan staged rollouts, guide MLOps integration, and define the operating model for your organization.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Deployment & Scaling</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Plan staged, change-managed rollouts</li>
+                                <li>Guide production MLOps integration</li>
+                                <li>Enable operating model & CoE</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                     <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                        <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">5</div>
+                            <h3 class="font-bold text-lg mb-2">Governance & Monitoring</h3>
+                            <p class="text-sm text-gray-600">Establish an AI governance council, implement continuous monitoring, and conduct regular audits for compliance.</p>
+                        </div>
+                         <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Governance & Monitoring</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Establish AI governance council</li>
+                                <li>Implement continuous monitoring & logging</li>
+                                <li>Conduct regular compliance audits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Capabilities Section -->
+        <section id="capabilities" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Core Capabilities</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">We provide expert guidance across the essential pillars of a successful enterprise AI program.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 section-content">
+                    <div class="relative bg-gray-50 p-8 rounded-lg border border-gray-200 group overflow-hidden">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-xl mb-3">AI Platform Strategy & Models</h3>
+                            <p class="text-gray-600 text-sm">Guidance on model selection, evaluation frameworks, and architecture to align with your cost, latency, and risk requirements while maintaining control over TCO.</p>
+                        </div>
+                         <div class="absolute inset-0 p-8 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-xl mb-3 text-brand-red">Key Insights</h3>
+                             <ul class="text-sm text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Model selection & evaluation</li>
+                                <li>Cost, latency & risk alignment</li>
+                                <li>Bias and TCO control</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative bg-gray-50 p-8 rounded-lg border border-gray-200 group overflow-hidden">
+                         <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-xl mb-3">Enterprise Integration & LLMOps</h3>
+                            <p class="text-gray-600 text-sm">Design for how AI fits your enterprise, including MLOps standards and secure integration with proprietary data using techniques like Retrieval-Augmented Generation (RAG).</p>
+                        </div>
+                        <div class="absolute inset-0 p-8 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-xl mb-3 text-brand-red">Key Insights</h3>
+                             <ul class="text-sm text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>AI operating model design</li>
+                                <li>Secure RAG integration patterns</li>
+                                <li>Cloud-agnostic, zero-trust architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative bg-gray-50 p-8 rounded-lg border border-gray-200 group overflow-hidden">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-xl mb-3">Alignment & Optimization</h3>
+                            <p class="text-gray-600 text-sm">Establish policies, evaluation rubrics, and human feedback loops (RLHF) to align AI outputs with your business rules and advise on efficient fine-tuning (LoRA/PEFT).</p>
+                        </div>
+                         <div class="absolute inset-0 p-8 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-xl mb-3 text-brand-red">Key Insights</h3>
+                             <ul class="text-sm text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Reinforcement Learning (RLHF)</li>
+                                <li>Parameter-Efficient Fine-Tuning</li>
+                                <li>Cost-efficient performance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Why Partner With Us</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">Our unique combination of strategic insight, technical depth, and a governance-first mindset sets us apart.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 section-content">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Holistic Strategy</h3>
+                        <p class="text-gray-600 text-sm">We connect executive vision to an actionable game plan with a clear ROI and risk fit for every initiative.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Deep GenAI Expertise</h3>
+                        <p class="text-gray-600 text-sm">Hands-on experience with prompt engineering, RLHF, and model evaluation to solve real-world issues like hallucinations.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Security by Design</h3>
+                        <p class="text-gray-600 text-sm">Governance and compliance are foundational, not add-ons. We build in security reviews at every step.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Accelerated Time-to-Value</h3>
+                        <p class="text-gray-600 text-sm">Proven playbooks and reference architectures shorten decision cycles and deliver value in weeks, not months.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Proven Frameworks</h3>
+                        <p class="text-gray-600 text-sm">Field-tested governance models, MLOps standards, and evaluation rubrics to avoid pitfalls and ensure predictable outcomes.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Cross-Industry Experience</h3>
+                        <p class="text-gray-600 text-sm">We've guided AI initiatives in 20+ industries, adapting solutions to unique domain and regulatory requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Value Delivered Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Delivering Real Results</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">Our engagements consistently deliver tangible business value and a significant return on investment.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center section-content">
+                    <div><p class="text-4xl font-bold brand-red">5x</p><p class="text-sm text-gray-600 mt-2">Lower Model Adaptation Costs</p></div>
+                    <div><p class="text-4xl font-bold brand-red">33%</p><p class="text-sm text-gray-600 mt-2">Faster Implementation Cycles</p></div>
+                    <div><p class="text-4xl font-bold brand-red">+19%</p><p class="text-sm text-gray-600 mt-2">Better Output Alignment</p></div>
+                    <div><p class="text-4xl font-bold brand-red">Zero</p><p class="text-sm text-gray-600 mt-2">Critical AI Incidents</p></div>
+                    <div><p class="text-4xl font-bold brand-red">5x</p><p class="text-sm text-gray-600 mt-2">Return on Investment</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                 <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4 section-content">
+                    <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center font-semibold text-gray-800">How do you ensure our data won’t be used to train third-party models?
+                                <svg class="w-5 h-5 text-gray-500 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-600 text-sm">We establish hard data boundaries and route traffic through governance-controlled gateways with no-retain policies. No customer data is used to train external models without your explicit approval.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center font-semibold text-gray-800">How do you prevent vendor lock-in?
+                                <svg class="w-5 h-5 text-gray-500 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-600 text-sm">We are vendor-neutral and design with portability in mind, using abstraction layers and open standards that allow you to switch models or platforms as needed.</div>
+                        </details>
+                    </div>
+                     <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center font-semibold text-gray-800">How do you prove ROI and avoid “AI theater”?
+                                <svg class="w-5 h-5 text-gray-500 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-600 text-sm">Each use case starts with a baseline, a target, and a measurement plan. We track benefit realization (cost savings, revenue, productivity) and will pivot if the data doesn’t justify scaling.</div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-white border-t border-gray-200">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h3 class="text-2xl font-bold text-gray-900">Start Your Governed AI Journey</h3>
+            <p class="text-gray-600 mt-2 mb-6">Contact our advisory team to build an AI program that delivers real value, safely.</p>
+            <a href="#" class="brand-red-bg text-white px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">Schedule a Consultation</a>
+            <p class="text-xs text-gray-500 mt-10">&copy; 2024 AI Advisory Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+            
+            const animatedElements = document.querySelectorAll('.section-header, .section-content');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            animatedElements.forEach(el => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>
+

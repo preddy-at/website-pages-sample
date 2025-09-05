@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Security: Heimdall</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url('https://placehold.co/1920x1080/f3f4f6/d2262f?text=AI+Security') no-repeat center center/cover;
+        }
+
+        .brand-red {
+            color: #d2262f;
+        }
+
+        .brand-red-bg {
+            background-color: #d2262f;
+        }
+        
+        .brand-red-border {
+            border-color: #d2262f;
+        }
+
+        .section-header, .section-content {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .section-content {
+            transition-delay: 0.2s;
+        }
+
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .faq-item details > summary {
+            list-style: none;
+        }
+        .faq-item details > summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item details[open] summary svg {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">
+                <span class="brand-red">AI</span> Security
+            </h1>
+            <div class="hidden md:flex space-x-6 text-sm items-center text-gray-700">
+                <a href="#overview" class="hover:text-brand-red transition-colors">Overview</a>
+                <a href="#methodology" class="hover:text-brand-red transition-colors">Methodology</a>
+                <a href="#architecture" class="hover:text-brand-red transition-colors">Architecture</a>
+                <a href="#offerings" class="hover:text-brand-red transition-colors">Offerings</a>
+                <a href="#ethics" class="hover:text-brand-red transition-colors">Ethics</a>
+                <a href="#faq" class="hover:text-brand-red transition-colors">FAQ</a>
+                <a href="#contact" class="brand-red-bg text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity">Contact Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 p-4 border-t border-gray-200">
+             <a href="#overview" class="block py-2 text-gray-800 hover:text-brand-red">Overview</a>
+             <a href="#methodology" class="block py-2 text-gray-800 hover:text-brand-red">Methodology</a>
+             <a href="#architecture" class="block py-2 text-gray-800 hover:text-brand-red">Architecture</a>
+             <a href="#offerings" class="block py-2 text-gray-800 hover:text-brand-red">Offerings</a>
+             <a href="#ethics" class="block py-2 text-gray-800 hover:text-brand-red">Ethics</a>
+             <a href="#faq" class="block py-2 text-gray-800 hover:text-brand-red">FAQ</a>
+             <a href="#contact" class="block mt-2 text-center brand-red-bg text-white px-4 py-2 rounded-md hover:opacity-90">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="overview" class="hero-section">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">The New <span class="brand-red">AI Security</span> Imperative</h2>
+            <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+                Enterprises are pushing AI and LLMs into mission-critical workflows, but traditional security can’t defend against LLM-specific risks. Our enterprise-grade AI security platform delivers end-to-end protection for models and autonomous agents.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Methodology Section -->
+        <section id="methodology" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">End-to-End Methodology for Securing AI</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">Our comprehensive, five-step lifecycle ensures every phase of your AI development and deployment is protected, from design to production.</p>
+                </div>
+                <div class="flex flex-col lg:flex-row items-stretch justify-center gap-4 lg:gap-2 section-content">
+                    <!-- Step 1 -->
+                    <div class="flex-1 relative group overflow-hidden bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                             <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">1. Threat Discovery</h3>
+                            <p class="text-gray-600 text-sm">Conducting risk assessments and threat modeling to identify attack vectors and align with NIST AI RMF.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Threat Discovery</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Risk assessments & threat modeling</li>
+                                <li>Identify prompt injection & data poisoning</li>
+                                <li>Align with NIST AI RMF</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center text-gray-400 lg:rotate-0 rotate-90 my-4 lg:my-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+                    <!-- Step 2 -->
+                    <div class="flex-1 relative group overflow-hidden bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                             <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" y1="9" y2="9"></line></svg></div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">2. Secure Design</h3>
+                            <p class="text-gray-600 text-sm">Blueprinting a zero-trust AI architecture with security-by-design principles (SOC 2, HIPAA, GDPR).</p>
+                        </div>
+                         <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Secure Design</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Blueprint zero-trust architecture</li>
+                                <li>Security-by-design principles</li>
+                                <li>Robust input validation & output sanitization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center text-gray-400 lg:rotate-0 rotate-90 my-4 lg:my-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex-1 relative group overflow-hidden bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                             <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">3. Model Hardening</h3>
+                            <p class="text-gray-600 text-sm">Fortifying models with adversarial training, red-teaming, and supply chain security checks.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Model Hardening</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Adversarial training & robustness</li>
+                                <li>Rigorous red-team testing</li>
+                                <li>LLM supply chain security checks</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center text-gray-400 lg:rotate-0 rotate-90 my-4 lg:my-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+                    <!-- Step 4 -->
+                     <div class="flex-1 relative group overflow-hidden bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                             <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg></div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">4. Secure Deployment</h3>
+                            <p class="text-gray-600 text-sm">Deploying models via containerized pipelines with a built-in AI firewall and agent access controls.</p>
+                        </div>
+                         <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Secure Deployment</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Containerized, cloud-agnostic pipelines</li>
+                                <li>Built-in AI firewall</li>
+                                <li>Least-privilege agent access controls</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center text-gray-400 lg:rotate-0 rotate-90 my-4 lg:my-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+                    <!-- Step 5 -->
+                     <div class="flex-1 relative group overflow-hidden bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                             <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">5. Continuous Monitoring</h3>
+                            <p class="text-gray-600 text-sm">Logging all AI decisions for a complete audit trail via our AI-SOC, with real-time alerts and dashboards.</p>
+                        </div>
+                         <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Continuous Monitoring</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Complete, human-readable audit trail</li>
+                                <li>AI-SOC dashboards & real-time alerts</li>
+                                <li>Align with NIST AI RMF "Measure"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Architecture Section -->
+        <section id="architecture" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Heimdall: Dynamic Security Architecture</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">A dynamic, multi-layer AI security architecture founded on zero-trust principles and real-time control mechanisms.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 section-content">
+                    <!-- Card 1 -->
+                    <div class="relative group overflow-hidden bg-gray-50 p-6 rounded-xl border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Zero-Trust Agent Gateway</h3>
+                            <p class="text-gray-600 text-sm mb-4">All agent and tool actions traverse a hardened gateway, ensuring every request is authenticated and authorized based on least-privilege principles.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Gateway Capabilities</h3>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                                <li>Per-request authentication & authorization</li>
+                                <li>Inject safety context on the fly</li>
+                                <li>Log every action for audit & forensics</li>
+                                <li>Contain compromised agents at origin</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Card 2 -->
+                    <div class="relative group overflow-hidden bg-gray-50 p-6 rounded-xl border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Secure Inference Layer</h3>
+                            <p class="text-gray-600 text-sm mb-4">An inline AI firewall filters inputs and outputs in real time to stop jailbreaks, enforce content policies, and detect abuse patterns.</p>
+                        </div>
+                         <div class="absolute inset-0 p-6 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Firewall Capabilities</h3>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                                <li>Real-time jailbreak & filtering</li>
+                                <li>Output scanning & redaction</li>
+                                <li>Anomaly & abuse pattern detection</li>
+                                <li>Cloud-agnostic, containerized deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Card 3 -->
+                    <div class="relative group overflow-hidden bg-gray-50 p-6 rounded-xl border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Layered Defense-in-Depth</h3>
+                            <p class="text-gray-600 text-sm mb-4">Redundant controls from ingestion to output ensure no single point of failure and enable dynamic, automated threat response.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Defense Capabilities</h3>
+                             <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                                <li>Redundant controls eliminate single failure points</li>
+                                <li>Dynamic reconfiguration on anomalies</li>
+                                <li>Hot-update security policies with zero downtime</li>
+                                <li>Modular components that scale horizontally</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                 <div class="mt-12 text-center text-gray-600 section-content">
+                    <p class="text-sm">This architecture provides comprehensive visibility and control over your entire AI ecosystem.</p>
+                                    </div>
+            </div>
+        </section>
+
+        <!-- Offerings Section -->
+        <section id="offerings" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">360° AI Security Shield</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">A modular suite to protect models and agents across the lifecycle. Deploy end-to-end or à la carte to integrate cleanly with your existing security stack.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 section-content">
+                    <!-- Offering 1 -->
+                    <div class="relative group overflow-hidden bg-white rounded-xl p-8 border border-gray-200 shadow-md">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h4 class="text-2xl font-bold mb-3 text-gray-900">AI Firewall & Runtime Defense</h4>
+                            <p class="text-gray-600">Real-time guardrails analogous to a WAF for AI, continuously updated with new threat intelligence.</p>
+                        </div>
+                         <div class="absolute inset-0 p-8 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-xl font-bold mb-3 text-brand-red">Key Features</h4>
+                            <ul class="space-y-2 text-sm list-disc list-inside text-gray-700">
+                                <li>Blocks prompt injection & mitigates adversarial inputs.</li>
+                                <li>Filters toxic/sensitive content before impact.</li>
+                                <li>Application-layer protection for every inference.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Offering 2 -->
+                    <div class="relative group overflow-hidden bg-white rounded-xl p-8 border border-gray-200 shadow-md">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h4 class="text-2xl font-bold mb-3 text-gray-900">Agent Access Control & Sandbox</h4>
+                            <p class="text-gray-600">Each agent operates under least-privilege in a sandboxed runtime, with fine-grained RBAC.</p>
+                        </div>
+                         <div class="absolute inset-0 p-8 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-xl font-bold mb-3 text-brand-red">Key Features</h4>
+                             <ul class="space-y-2 text-sm list-disc list-inside text-gray-700">
+                                <li>Enforces allowed tools, data sources, and APIs.</li>
+                                <li>Disallows unsupervised, high-impact actions.</li>
+                                <li>Intercepts and blocks out-of-policy requests.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Offering 3 -->
+                    <div class="relative group overflow-hidden bg-white rounded-xl p-8 border border-gray-200 shadow-md">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h4 class="text-2xl font-bold mb-3 text-gray-900">Injection & Poisoning Defense</h4>
+                            <p class="text-gray-600">Input-side validators and training-side hygiene to neutralize malicious instructions and detect poison patterns.</p>
+                        </div>
+                        <div class="absolute inset-0 p-8 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-xl font-bold mb-3 text-brand-red">Key Features</h4>
+                             <ul class="space-y-2 text-sm list-disc list-inside text-gray-700">
+                                <li>Strip and neutralize hidden or encoded instructions.</li>
+                                <li>Sanitize and monitor datasets for anomalies.</li>
+                                <li>Generate synthetic attacks to stress-test models.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Offering 4 -->
+                    <div class="relative group overflow-hidden bg-white rounded-xl p-8 border border-gray-200 shadow-md">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h4 class="text-2xl font-bold mb-3 text-gray-900">Audit Logging & Forensics</h4>
+                            <p class="text-gray-600">Full-fidelity, structured logs for queries, actions, and decisions, with easy SIEM integration.</p>
+                        </div>
+                        <div class="absolute inset-0 p-8 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="text-xl font-bold mb-3 text-brand-red">Key Features</h4>
+                             <ul class="space-y-2 text-sm list-disc list-inside text-gray-700">
+                                <li>Simplify compliance reporting (SOC 2, HIPAA).</li>
+                                <li>Establish root cause with forensic replay.</li>
+                                <li>Clear "who/what/why" records of data access.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ethical AI Section -->
+        <section id="ethics" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Ethical and Responsible AI Operations</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">Security and responsibility go hand-in-hand. We embed governance, fairness, and transparency into day-to-day AI operations.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 section-content">
+                    <div class="relative group overflow-hidden text-center p-4">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-lg text-brand-red mb-2">Bias Detection</h3>
+                            <p class="text-gray-600 text-sm">Pre-deployment bias testing and ongoing production monitors to prevent unethical outcomes.</p>
+                        </div>
+                        <div class="absolute inset-0 p-4 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                           <h3 class="font-bold text-lg text-brand-red mb-2">Our Method</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                               <li>Pre-deployment testing</li>
+                               <li>Dataset rebalancing</li>
+                               <li>Ongoing production monitoring</li>
+                           </ul>
+                        </div>
+                    </div>
+                     <div class="relative group overflow-hidden text-center p-4">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-lg text-brand-red mb-2">Explainability</h3>
+                            <p class="text-gray-600 text-sm">Human-readable rationales for agent actions and LLM outputs for stakeholder transparency.</p>
+                        </div>
+                        <div class="absolute inset-0 p-4 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                           <h3 class="font-bold text-lg text-brand-red mb-2">Our Method</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                               <li>Human-readable rationales</li>
+                               <li>XAI techniques & model cards</li>
+                               <li>Aligns with NIST AI RMF</li>
+                           </ul>
+                        </div>
+                    </div>
+                     <div class="relative group overflow-hidden text-center p-4">
+                         <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-lg text-brand-red mb-2">Red Teaming</h3>
+                            <p class="text-gray-600 text-sm">Regular red-team exercises and ethical hacking to continuously harden defenses against new threats.</p>
+                        </div>
+                         <div class="absolute inset-0 p-4 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                           <h3 class="font-bold text-lg text-brand-red mb-2">Our Method</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                               <li>Simulate prompt injection</li>
+                               <li>Test for policy evasion & data exfiltration</li>
+                               <li>Findings feed continuous hardening</li>
+                           </ul>
+                        </div>
+                    </div>
+                     <div class="relative group overflow-hidden text-center p-4">
+                         <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-lg text-brand-red mb-2">Compliance</h3>
+                            <p class="text-gray-600 text-sm">Controls mapped to NIST AI RMF, OWASP Top 10 for LLMs, and privacy regulations like GDPR and CCPA.</p>
+                        </div>
+                         <div class="absolute inset-0 p-4 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                           <h3 class="font-bold text-lg text-brand-red mb-2">Our Method</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                               <li>Controls mapped to NIST & OWASP</li>
+                               <li>Privacy regs built-in (GDPR/CCPA)</li>
+                               <li>Audit-ready artifacts</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                 <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4 section-content">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center">
+                                <span class="font-semibold text-gray-800">How is Heimdall deployed?</span>
+                                <svg class="w-5 h-5 text-gray-500 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-600 text-sm">
+                                <p>Heimdall can be deployed as an inline reverse-proxy gateway, a sidecar per service, or an SDK. It is cloud-agnostic (AWS/Azure/GCP) and supports on-premise, air-gapped, Kubernetes, and serverless environments.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center">
+                                <span class="font-semibold text-gray-800">What models and frameworks are supported?</span>
+                                <svg class="w-5 h-5 text-gray-500 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-600 text-sm">
+                                <p>We support major providers like OpenAI, Anthropic, Google, and open-source models via vLLM/TGI. We also support orchestration frameworks like LangChain and LlamaIndex.</p>
+                            </div>
+                        </details>
+                    </div>
+                     <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center">
+                                <span class="font-semibold text-gray-800">What is the performance impact?</span>
+                                <svg class="w-5 h-5 text-gray-500 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-600 text-sm">
+                                <p>The inline firewall typically adds a p50 latency of ~3-8 ms per request path. The system is designed for horizontal autoscaling to handle high throughput with minimal overhead.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center">
+                                <span class="font-semibold text-gray-800">How do you prevent data leakage?</span>
+                                <svg class="w-5 h-5 text-gray-500 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-600 text-sm">
+                                <p>We use a multi-layered approach including DLP detectors for PII/secrets, context scoping with role-based access control (RBAC), and output filters that enforce confidentiality policies.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-white border-t border-gray-200">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h3 class="text-2xl font-bold text-gray-900">Ready to Secure Your AI?</h3>
+            <p class="text-gray-600 mt-2 mb-6">Contact us to learn how we can protect your AI investments.</p>
+            <a href="#" class="brand-red-bg text-white px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">Get in Touch</a>
+            <p class="text-xs text-gray-500 mt-10">&copy; 2024 AI Security Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Intersection Observer for animations
+            const animatedElements = document.querySelectorAll('.section-header, .section-content');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
+

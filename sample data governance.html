@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Governance & Compliance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), url('https://placehold.co/1920x1080/f3f4f6/d2262f?text=Data+Governance') no-repeat center center/cover;
+        }
+
+        .brand-red {
+            color: #d2262f;
+        }
+
+        .brand-red-bg {
+            background-color: #d2262f;
+        }
+
+        .section-header, .section-content {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .section-content {
+            transition-delay: 0.2s;
+        }
+
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">
+                Data <span class="brand-red">Governance</span>
+            </h1>
+            <div class="hidden md:flex space-x-6 text-sm items-center text-gray-700">
+                <a href="#overview" class="hover:text-brand-red transition-colors">Overview</a>
+                <a href="#approach" class="hover:text-brand-red transition-colors">Approach</a>
+                <a href="#tech" class="hover:text-brand-red transition-colors">Technologies</a>
+                <a href="#why-us" class="hover:text-brand-red transition-colors">Why Us</a>
+                <a href="#contact" class="brand-red-bg text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity">Get Started</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 p-4 border-t border-gray-200">
+             <a href="#overview" class="block py-2 text-gray-800 hover:text-brand-red">Overview</a>
+             <a href="#approach" class="block py-2 text-gray-800 hover:text-brand-red">Approach</a>
+             <a href="#tech" class="block py-2 text-gray-800 hover:text-brand-red">Technologies</a>
+             <a href="#why-us" class="block py-2 text-gray-800 hover:text-brand-red">Why Us</a>
+             <a href="#contact" class="block mt-2 text-center brand-red-bg text-white px-4 py-2 rounded-md hover:opacity-90">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="overview" class="hero-section">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Intelligent Data Governance & <span class="brand-red">Compliance</span></h2>
+            <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+                Our end-to-end framework ensures your data is accurate, secure, and used responsibly, fostering trust, reducing risk, and unlocking business value.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Our Approach Section -->
+        <section id="approach" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">A Disciplined, Multi-Phase Methodology</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">We implement sustainable data governance through a disciplined framework focused on data integrity, compliance, and protection.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 section-content">
+                    <!-- Phase 1 -->
+                    <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                        <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">1</div>
+                            <h3 class="font-bold text-lg mb-2">Discovery & Classification</h3>
+                            <p class="text-sm text-gray-600">Map data sources, classify by sensitivity, and prioritize high-risk/high-value data domains.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Discovery Details</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Map and catalog all data assets</li>
+                                <li>Auto-classify for sensitivity & criticality</li>
+                                <li>Prioritize high-risk, high-value domains</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Phase 2 -->
+                    <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                         <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">2</div>
+                            <h3 class="font-bold text-lg mb-2">Policy & Standards</h3>
+                            <p class="text-sm text-gray-600">Define data usage policies, establish stewardship roles, and align with regulatory requirements.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Policy Details</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Define data quality standards</li>
+                                <li>Establish data ownership & stewardship</li>
+                                <li>Align policy with business objectives</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Phase 3 -->
+                    <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                        <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">3</div>
+                            <h3 class="font-bold text-lg mb-2">Architecture & Tooling</h3>
+                            <p class="text-sm text-gray-600">Design a scalable architecture and implement tools for cataloging, lineage, and access control.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Architecture Details</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Design a modular, scalable architecture</li>
+                                <li>Implement data catalog & lineage tools</li>
+                                <li>Enforce policy across the data lifecycle</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Phase 4 -->
+                    <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                         <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">4</div>
+                            <h3 class="font-bold text-lg mb-2">Deployment & Integration</h3>
+                            <p class="text-sm text-gray-600">Embed automated controls into data pipelines and workflows, and enable all stakeholders.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Deployment Details</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Integrate controls into existing pipelines</li>
+                                <li>Embed automated data quality checks</li>
+                                <li>Train and onboard all stakeholders</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Phase 5 -->
+                     <div class="relative bg-white rounded-lg shadow-md border border-gray-200 text-center group overflow-hidden">
+                        <div class="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-500/10 text-brand-red mb-4 mx-auto font-bold text-xl">5</div>
+                            <h3 class="font-bold text-lg mb-2">Monitoring & Improvement</h3>
+                            <p class="text-sm text-gray-600">Continuously track metrics, maintain audit logs, and refine policies as regulations evolve.</p>
+                        </div>
+                        <div class="absolute inset-0 p-6 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-lg mb-3 text-brand-red">Monitoring Details</h3>
+                            <ul class="text-xs text-gray-600 text-left space-y-2 list-disc list-inside">
+                                <li>Track data quality & compliance metrics</li>
+                                <li>Maintain immutable audit logs</li>
+                                <li>Refine policies as regulations change</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Core Technologies Section -->
+        <section id="tech" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Powered by Enterprise-Grade Technologies</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">Our solution automates governance and continuously improves data quality, security, and compliance.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 section-content">
+                    <!-- Tech 1 -->
+                    <div class="relative group overflow-hidden bg-gray-50 p-8 rounded-lg border border-gray-200">
+                        <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-xl mb-3">Unified Data Catalog & Lineage</h3>
+                            <p class="text-gray-600 text-sm">Deploy an enterprise data catalog that captures rich metadata and end-to-end data lineage, making data findable and traceable from origin to consumption.</p>
+                        </div>
+                        <div class="absolute inset-0 p-8 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-xl mb-3 text-brand-red">Key Benefits</h3>
+                            <ul class="text-sm text-gray-600 text-left space-y-2 list-disc list-inside">
+                               <li>Single source of truth for data</li>
+                               <li>End-to-end data traceability</li>
+                               <li>Enables trust and accountability</li>
+                           </ul>
+                        </div>
+                    </div>
+                     <!-- Tech 2 -->
+                    <div class="relative group overflow-hidden bg-gray-50 p-8 rounded-lg border border-gray-200">
+                         <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-xl mb-3">Automated Classification & Protection</h3>
+                            <p class="text-gray-600 text-sm">Use machine learning to automatically classify data, applying encryption or masking to sensitive fields and tagging datasets with appropriate access levels.</p>
+                        </div>
+                        <div class="absolute inset-0 p-8 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-xl mb-3 text-brand-red">Key Benefits</h3>
+                            <ul class="text-sm text-gray-600 text-left space-y-2 list-disc list-inside">
+                               <li>Intelligent data safeguarding</li>
+                               <li>Real-time PII detection & protection</li>
+                               <li>Enforces privacy by design</li>
+                           </ul>
+                        </div>
+                    </div>
+                     <!-- Tech 3 -->
+                    <div class="relative group overflow-hidden bg-gray-50 p-8 rounded-lg border border-gray-200">
+                         <div class="transition-opacity duration-300 group-hover:opacity-0">
+                            <h3 class="font-bold text-xl mb-3">Policy Engine & Continuous Monitoring</h3>
+                            <p class="text-gray-600 text-sm">A policy-as-code engine codifies and enforces governance rules, while a monitoring system analyzes data activities to detect anomalies or violations in real time.</p>
+                        </div>
+                        <div class="absolute inset-0 p-8 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="font-bold text-xl mb-3 text-brand-red">Key Benefits</h3>
+                            <ul class="text-sm text-gray-600 text-left space-y-2 list-disc list-inside">
+                               <li>Automated policy-as-code enforcement</li>
+                               <li>Real-time anomaly detection</li>
+                               <li>Centralized, auditable compliance view</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Why Partner With Us</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">We offer a unique combination of holistic vision, cutting-edge security thinking, and deep regulatory expertise.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 section-content">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Holistic Governance Vision</h3>
+                        <p class="text-gray-600 text-sm">We provide end-to-end coverage, from strategy and policy to technology and training, ensuring no data is left unmanaged.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Zero-Trust Security Foundation</h3>
+                        <p class="text-gray-600 text-sm">We design every deployment with a zero-trust architecture, where every access request is verified and every action is logged.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Deep Regulatory Expertise</h3>
+                        <p class="text-gray-600 text-sm">Our team stays ahead of global data protection laws (GDPR, CCPA) and translates them into actionable policies.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Intelligent Automation</h3>
+                        <p class="text-gray-600 text-sm">We leverage AI and automation to make governance smarter, detecting anomalies and handling routine compliance tasks.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Scalable & Adaptable Solutions</h3>
+                        <p class="text-gray-600 text-sm">Our modular framework is built to scale with your growth, accommodating expanding data volumes and new regulations.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 brand-red">Measurable Outcomes</h3>
+                        <p class="text-gray-600 text-sm">We define and track clear KPIs for data quality, security, and compliance, demonstrating tangible ROI to stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Value Delivered Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 section-header">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Quantifiable Improvements</h2>
+                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">By implementing our framework, clients have achieved significant, measurable results.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center section-content">
+                    <div><p class="text-4xl font-bold brand-red">98%</p><p class="text-sm text-gray-600 mt-2">Reduction in Policy Violations</p></div>
+                    <div><p class="text-4xl font-bold brand-red">65%</p><p class="text-sm text-gray-600 mt-2">Improvement in Data Quality</p></div>
+                    <div><p class="text-4xl font-bold brand-red">80%</p><p class="text-sm text-gray-600 mt-2">Faster Audit Preparation</p></div>
+                    <div><p class="text-4xl font-bold brand-red">50%</p><p class="text-sm text-gray-600 mt-2">Reduction in Manual Effort</p></div>
+                    <div><p class="text-4xl font-bold brand-red">100%</p><p class="text-sm text-gray-600 mt-2">Sensitive Data Coverage</p></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h3 class="text-2xl font-bold text-gray-900">Build Trust in Your Data</h3>
+            <p class="text-gray-600 mt-2 mb-6">Contact our team to build a data governance framework that powers your business.</p>
+            <a href="#" class="brand-red-bg text-white px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">Schedule a Consultation</a>
+            <p class="text-xs text-gray-500 mt-10">&copy; 2024 Data Governance Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+            
+            const animatedElements = document.querySelectorAll('.section-header, .section-content');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            animatedElements.forEach(el => { observer.observe(el); });
+        });
+    </script>
+</body>
+</html>
