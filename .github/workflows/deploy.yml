@@ -16,14 +16,12 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deployment job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -39,20 +37,16 @@ jobs:
 
       - name: Rename and prepare files
         run: |
-          # Create a directory for the site content
-          mkdir -p ${{ steps.pages.outputs.base_path }}
-          # Rename files for cleaner URLs and move them to the site directory
-          mv "sample ai advisory.html" "${{ steps.pages.outputs.base_path }}/ai-advisory.html"
-          mv "sample ai security.html" "${{ steps.pages.outputs.base_path }}/ai-security.html"
-          mv "sample data governance.html" "${{ steps.pages.outputs.base_path }}/data-governance.html"
-          # Optional: Create a simple index.html to link to the other pages
-          echo '<!DOCTYPE html><html><head><title>AI Solutions</title><meta http-equiv="refresh" content="0; url=ai-security.html"></head><body><p>If you are not redirected, <a href="ai-security.html">click here to go to the main page</a>.</p></body></html>' > ${{ steps.pages.outputs.base_path }}/index.html
+          mkdir -p website-pages-sample
+          mv "sample ai advisory.html" "website-pages-sample/ai-advisory.html"
+          mv "sample ai security.html" "website-pages-sample/ai-security.html"
+          mv "sample data governance.html" "website-pages-sample/data-governance.html"
+          echo '<!DOCTYPE html><html><head><title>AI Solutions</title><meta http-equiv="refresh" content="0; url=ai-security.html"></head><body><p>If you are not redirected, <a href="ai-security.html">click here to go to the main page</a>.</p></body></html>' > website-pages-sample/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload the site directory
-          path: ${{ steps.pages.outputs.base_path }}
+          path: website-pages-sample
 
       - name: Deploy to GitHub Pages
         id: deployment
