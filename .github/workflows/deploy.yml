@@ -1,0 +1,59 @@
+# This workflow deploys a static website to GitHub Pages.
+
+name: Deploy Static Website to GitHub Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deployment job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Rename and prepare files
+        run: |
+          # Create a directory for the site content
+          mkdir -p ${{ steps.pages.outputs.base_path }}
+          # Rename files for cleaner URLs and move them to the site directory
+          mv "sample ai advisory.html" "${{ steps.pages.outputs.base_path }}/ai-advisory.html"
+          mv "sample ai security.html" "${{ steps.pages.outputs.base_path }}/ai-security.html"
+          mv "sample data governance.html" "${{ steps.pages.outputs.base_path }}/data-governance.html"
+          # Optional: Create a simple index.html to link to the other pages
+          echo '<!DOCTYPE html><html><head><title>AI Solutions</title><meta http-equiv="refresh" content="0; url=ai-security.html"></head><body><p>If you are not redirected, <a href="ai-security.html">click here to go to the main page</a>.</p></body></html>' > ${{ steps.pages.outputs.base_path }}/index.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the site directory
+          path: ${{ steps.pages.outputs.base_path }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
